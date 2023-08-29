@@ -1,6 +1,5 @@
 [project]
 name = "py-arib-parser"
-version = "0.1.0"
 description = "Add your description here"
 authors = [
     { name = "yuta0306", email = "yuta.20010306@gmail.com" }
@@ -9,6 +8,7 @@ dependencies = [
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
+dynamic = ["version"]
 
 [build-system]
 requires = ["hatchling"]
@@ -26,6 +26,9 @@ dev-dependencies = [
 
 [tool.hatch.metadata]
 allow-direct-references = true
+
+[tool.hatch.version]
+path="src/py_arib_parser/__init__.py"
 
 [tool.rye.scripts]
 cli = { call = "scripts.cli:cli" }
